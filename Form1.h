@@ -59,6 +59,11 @@ namespace MHGUASS
 		return ReverseCompare( s1->total_slots_spare, s2->total_slots_spare );
 	}
 
+	int CompareSolutionByDecosUsed(Solution^ s1, Solution^ s2)
+	{
+		return Compare(s1->decorations.Count, s2->decorations.Count);
+	}
+
 	int CompareSolutionByFamily( Solution^ s1, Solution^ s2 )
 	{
 		return TryReverseCompare( s1->family_score[0], s2->family_score[0] ) :
@@ -1617,10 +1622,10 @@ namespace MHGUASS
 				| System::Windows::Forms::AnchorStyles::Right ) );
 			this->cmbSort->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->cmbSort->FormattingEnabled = true;
-			this->cmbSort->Items->AddRange( gcnew cli::array< System::Object^  >( 13 )
+			this->cmbSort->Items->AddRange( gcnew cli::array< System::Object^  >( 14 )
 			{
 				L"None", L"Dragon res", L"Fire res", L"Ice res",
-					L"Thunder res", L"Water res", L"Base defence", L"Max defence", L"Difficulty", L"Rarity", L"Slots spare", L"Family", L"Extra Skills"
+					L"Thunder res", L"Water res", L"Base defence", L"Max defence", L"Difficulty", L"Rarity", L"Slots spare", L"Family", L"Extra Skills", L"Decos used"
 			} );
 			this->cmbSort->Location = System::Drawing::Point( 6, 16 );
 			this->cmbSort->Name = L"cmbSort";
@@ -3016,6 +3021,7 @@ private:
 		cmbSort->Items[ 10 ] = StaticString( SortSlotsSpare );
 		cmbSort->Items[ 11 ] = StaticString( SortFamily );
 		cmbSort->Items[ 12 ] = StaticString( SortExtraSkills );
+		cmbSort->Items[ 13 ] = StaticString( SortDecosUsed );
 
 		charm_solution_map.Clear();
 		for each( Solution^ s in all_solutions )
@@ -3085,6 +3091,8 @@ private:
 			final_solutions.Sort( gcnew Comparison< Solution^ >( CompareSolutionByFamily ) );
 		else if( cmbSort->SelectedIndex == 12 )
 			final_solutions.Sort( gcnew Comparison< Solution^ >( CompareSolutionsByExtraSkills ) );
+		else if (cmbSort->SelectedIndex == 13)
+			final_solutions.Sort(gcnew Comparison< Solution^ >(CompareSolutionByDecosUsed));
 	}
 
 	void contextMenuStrip1_Closing( System::Object^ sender, ToolStripDropDownClosingEventArgs^ e )

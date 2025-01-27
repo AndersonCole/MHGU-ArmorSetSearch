@@ -229,6 +229,7 @@ ref struct StringTable
 		Difficulty,
 		Rarity,
 		SortSlotsSpare,
+		SortDecosUsed,
 		SortFamily,
 		SortExtraSkills,
 		Charms,

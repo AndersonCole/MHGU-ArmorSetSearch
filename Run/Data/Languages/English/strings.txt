@@ -118,6 +118,7 @@ Difficulty
 
 Rarity
 Slots Spare
+Decos Used
 
 #When sorting solutions, "Family" refers to how similar the armor pieces are:
 # Rathalos X + Rathalos X (great!)
