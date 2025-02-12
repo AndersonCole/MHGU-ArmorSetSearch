@@ -174,6 +174,7 @@ ref struct StringTable
 		SaveCharms,
 		Exit,
 		ClearSettings,
+		DarkMode,
 		AllowBadSkills,
 		AllowArena,
 		AllowEventArmor,

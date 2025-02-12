@@ -32,6 +32,9 @@ E&xit
 #This options resets all settings to default
 &Clear Settings
 
+#This option makes the main display dark
+Dark Mode
+
 #"Bad" skills are ones activated at -10 points or less.
 Allow Ba&d Skills
 
@@ -118,6 +121,8 @@ Difficulty
 
 Rarity
 Slots Spare
+
+#Sorts by least amount of overall decorations used
 Decos Used
 
 #When sorting solutions, "Family" refers to how similar the armor pieces are:

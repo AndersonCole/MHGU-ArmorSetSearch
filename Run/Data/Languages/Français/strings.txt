@@ -32,6 +32,9 @@
 #This options resets all settings to default
 &Options Par Défaut
 
+#This option makes the main display dark (Translate me!)
+Dark Mode
+
 #"Bad" skills are ones activated at -10 points or less.
 &Autoriser les Compétences Négatives
 
@@ -118,6 +121,9 @@ Difficulté
 
 Rareté
 Emplacements Restants
+
+#Sorts by least amount of overall decorations used (Translate me!)
+Decos Used
 
 #When sorting solutions, "Family" refers to how similar the armor pieces are:
 # Rathalos X + Rathalos X (great!)

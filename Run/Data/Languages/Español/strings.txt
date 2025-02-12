@@ -34,6 +34,9 @@ Traducido por Juan José Serrano González (Nitropc1976)
 # Esta opción restablece todas las configuraciones a las predeterminadas.
 &Borrar ajustes
 
+#This option makes the main display dark (Translate me!)
+Dark Mode
+
 # Las habilidades "negativas" son aquellas activadas con -10 puntos o menos.
 Permitir &Habilidades Negativas
 
@@ -120,6 +123,9 @@ Dificultad
 
 Rareza
 Espacios libres
+
+#Sorts by least amount of overall decorations used (Translate me!)
+Decos Used
 
 # Al clasificar los resultados, "Familia" se refiere a qué tan similares son las piezas de armadura:
 # Rathalos X + Rathalos X (genial!)
