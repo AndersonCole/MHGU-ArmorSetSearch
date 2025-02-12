@@ -1988,6 +1988,13 @@ private:
 			cmb->ForeColor = System::Drawing::Color::FromArgb(235, 235, 235);
 		}
 
+		if (control->GetType() == RichTextBox::typeid) 
+		{
+			RichTextBox^ rtxt = safe_cast<RichTextBox^>(control);
+			rtxt->BackColor = System::Drawing::Color::FromArgb(32, 34, 35);
+			rtxt->ForeColor = System::Drawing::Color::FromArgb(100, 215, 238);
+		}
+
 		for each (Control^ child in control->Controls)
 		{
 			ApplyDarkMode(child);
